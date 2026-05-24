@@ -90,6 +90,26 @@
 .ps-plus { background: rgba(239,68,68,0.04); color: var(--muted); }
 .ps-total { width: 100%; text-align: center; font-size: 15px; font-weight: 700; color: #f87171; margin-top: 8px; }
 
+/* NUCLEAR ARCHITECTURE */
+.nuclear-center { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 12px 0 16px; }
+.nc-core { background: linear-gradient(135deg, var(--accent), var(--accent2)); border-radius: 12px; padding: 12px 28px; font-size: 16px; font-weight: 900; display: flex; align-items: center; gap: 10px; color: #fff; }
+.nc-arrow { font-size: 13px; color: var(--muted); }
+.nuclear-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; width: 100%; text-align: left; }
+.ng-item { display: flex; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; align-items: flex-start; }
+.ng-item.ng-highlight { border-color: rgba(99,102,241,0.35); background: rgba(99,102,241,0.06); }
+.ng-icon { font-size: 20px; flex-shrink: 0; }
+.ng-item strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; color: var(--text); }
+.ng-item p { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+/* MARKET TABLE */
+.market-table { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 14px; }
+.mt-row { display: grid; grid-template-columns: 1.4fr 1.2fr 1.4fr 1.6fr; padding: 10px 18px; font-size: 13px; gap: 8px; align-items: center; }
+.mt-row.mt-head { background: var(--bg3); color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.mt-row:not(.mt-head) { border-top: 1px solid var(--border); color: var(--text); }
+.mt-row:not(.mt-head):hover { background: var(--card); }
+.market-note { font-size: 13px; color: var(--muted); font-style: italic; border-left: 3px solid var(--accent); padding-left: 14px; text-align: left; width: 100%; }
+@media (max-width: 768px) { .nuclear-grid { grid-template-columns: 1fr 1fr; } .mt-row { grid-template-columns: 1fr 1fr; } }
+
 /* COMPANY GRID */
 .company-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; width: 100%; text-align: left; }
 .co-item { display: flex; gap: 14px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; align-items: flex-start; }
@@ -97,6 +117,27 @@
 .co-item strong { display: block; font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
 .co-item p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 @media (max-width: 768px) { .company-grid { grid-template-columns: 1fr; } }
+
+/* DEMO GRID */
+.demo-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; width: 100%; text-align: left; }
+.demo-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.2s; }
+.demo-item:hover { border-color: rgba(99,102,241,0.4); }
+.demo-num { font-size: 40px; font-weight: 900; color: rgba(99,102,241,0.2); line-height: 1; }
+.demo-icon { font-size: 36px; }
+.demo-item h3 { font-size: 20px; font-weight: 800; color: var(--text); }
+.demo-item p { font-size: 14px; color: var(--muted); line-height: 1.7; flex: 1; }
+.demo-link { display: inline-block; font-size: 13px; font-weight: 700; color: var(--accent); text-decoration: none; border: 1px solid rgba(99,102,241,0.3); padding: 6px 14px; border-radius: 8px; transition: background 0.2s; }
+.demo-link:hover { background: rgba(99,102,241,0.1); }
+
+/* PRODUCTS GRID */
+.products-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; width: 100%; text-align: left; }
+.prod-item { display: flex; gap: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; align-items: flex-start; }
+.prod-item.core { border-color: rgba(99,102,241,0.4); background: rgba(99,102,241,0.06); }
+.prod-item > span { font-size: 22px; flex-shrink: 0; }
+.prod-item strong { display: block; font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.prod-item p { font-size: 11px; color: var(--muted); line-height: 1.5; margin-bottom: 4px; }
+.prod-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); background: rgba(99,102,241,0.1); padding: 2px 8px; border-radius: 100px; }
+@media (max-width: 768px) { .products-grid { grid-template-columns: 1fr 1fr; } }
 
 /* INNOVATION GRID */
 .innov-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; width: 100%; text-align: left; }

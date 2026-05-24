@@ -1,6 +1,6 @@
 // public/brimind/presentation.js
 document.addEventListener('DOMContentLoaded', () => {
-  const slides = Array.from(document.querySelectorAll('.slide'));
+  const slides = Array.from(document.querySelectorAll('.slide:not([style*="display:none"])'));
   const total = slides.length;
   let current = 0;
 
